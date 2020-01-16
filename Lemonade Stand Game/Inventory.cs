@@ -19,13 +19,10 @@ namespace Lemonade_Stand_Game
         //Member Methods (CAN DO)
         public Inventory()
         {
-            lemons = new List<Lemon>();
+            lemons = new List<Lemon>(); 
             iceCubes = new List<IceCube>();
             cups = new List<Cup>();
             sugarCubes = new List<SugarCube>();
-
-        }
-
-        
+        }       
     }
 }
