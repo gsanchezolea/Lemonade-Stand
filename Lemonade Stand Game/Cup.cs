@@ -8,5 +8,13 @@ namespace Lemonade_Stand_Game
 {
     class Cup: Item
     {
+
+        //Member Variables (HAS A)
+        
+        //Constructor
+
+        //Member Methods (CAN DO)
+
+        public override
     }
 }

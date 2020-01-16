@@ -13,9 +13,13 @@ namespace Lemonade_Stand_Game
         private Player player;
         private int currentDay;
         private List<Day> days;
-
         //Constructor
-
+       
+        public Game()
+        {
+            Random random = new Random();
+            days = new List<Day>(7);
+        }
         //Member Methods (CAN DO)
 
 

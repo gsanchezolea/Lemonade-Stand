@@ -17,7 +17,11 @@ namespace Lemonade_Stand_Game
         public Pitcher pitcher;
 
         //Constructor
-
+        public Player()
+        {
+            name = "JOE";
+           
+        }
         //Member Methods (CAN DO)
 
 

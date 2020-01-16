@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_Game
 {
-    abstract class Item
+    public abstract class Item
     {
 
         //Member Variables (HAS A)
-
+        public string name; 
         //Constructor
 
         //Member Methods (CAN DO)

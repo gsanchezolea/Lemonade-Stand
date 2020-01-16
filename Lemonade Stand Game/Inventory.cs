@@ -17,7 +17,10 @@ namespace Lemonade_Stand_Game
         //Constructor
 
         //Member Methods (CAN DO)
+        public Inventory()
+        {
 
+        }
 
     }
 }

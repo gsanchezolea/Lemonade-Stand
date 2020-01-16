@@ -8,7 +8,18 @@ namespace Lemonade_Stand_Game
 {
     class Wallet
     {
+
+        //Member Variables (HAS A)
         private double money;
-        public double Money; 
+        public double Money;
+        //Constructor
+        public Wallet()
+        {
+            money = 20;
+        }
+        //Member Methods (CAN DO)
+
+
+        
     }
 }
