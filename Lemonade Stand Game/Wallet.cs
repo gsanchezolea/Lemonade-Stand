@@ -8,5 +8,7 @@ namespace Lemonade_Stand_Game
 {
     class Wallet
     {
+        private double money;
+        public double Money; 
     }
 }

@@ -8,5 +8,13 @@ namespace Lemonade_Stand_Game
 {
     class Pitcher
     {
+
+        //Member Variables (HAS A)
+        public int cupsLeftInPitcher;
+        //Constructor
+
+        //Member Methods (CAN DO)
+
+
     }
 }

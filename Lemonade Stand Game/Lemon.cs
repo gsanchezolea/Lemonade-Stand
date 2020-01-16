@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_Game
 {
-    class Lemon
+    class Lemon: Item
     {
     }
 }

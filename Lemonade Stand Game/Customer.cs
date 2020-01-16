@@ -8,5 +8,13 @@ namespace Lemonade_Stand_Game
 {
     class Customer
     {
+
+        //Member Variables (HAS A)
+        public string name;
+        //Constructor
+
+        //Member Methods (CAN DO)
+
+
     }
 }

@@ -8,5 +8,16 @@ namespace Lemonade_Stand_Game
 {
     class Game
     {
+
+        //Member Variables (HAS A)
+        private Player player;
+        private int currentDay;
+        private List<Day> days;
+
+        //Constructor
+
+        //Member Methods (CAN DO)
+
+
     }
 }

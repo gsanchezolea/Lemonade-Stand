@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_Game
 {
-    class Class2
+    abstract class Item
     {
+
+        //Member Variables (HAS A)
+
+        //Constructor
+
+        //Member Methods (CAN DO)
+
+
     }
 }
