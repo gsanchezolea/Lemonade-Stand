@@ -21,7 +21,7 @@ namespace Lemonade_Stand_Game
         {
 
             days = new List<Day>(7);
-
+            Day day = new Day(random);
             random = new Random();
 
         }

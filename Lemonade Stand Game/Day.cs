@@ -16,18 +16,15 @@ namespace Lemonade_Stand_Game
         //Constructor
 
         //Member Methods (CAN DO)
-        public Day()
+        public Day(Random rng)
         {
-            
+            weather = new Weather(rng);
         }
-        public void displayWeather(int t1,string c1)
+        
+        public void RunDay()
         {
-            string condition = c1;
-            int temperature = t1;
-            Console.WriteLine("The weather condition for today is:" + condition);
-            Console.WriteLine("The temperature for today is:" + temperature);
-            Console.ReadLine();
-           
+            weather.displayWeather();
+            //// mini master setup the day /////
         }
     }
 }

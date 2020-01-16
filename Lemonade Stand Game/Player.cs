@@ -11,6 +11,7 @@ namespace Lemonade_Stand_Game
 
         //Member Variables (HAS A)
         public string name;
+        
         public Inventory inventory;
         public Wallet wallet;
         public Recipe recipe;
