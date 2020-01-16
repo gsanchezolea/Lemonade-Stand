@@ -10,12 +10,24 @@ namespace Lemonade_Stand_Game
     {
 
         //Member Variables (HAS A)
+
         public Weather weather;
         public List<Customer> customers;
         //Constructor
 
         //Member Methods (CAN DO)
-
-
+        public Day()
+        {
+            
+        }
+        public void displayWeather(int t1,string c1)
+        {
+            string condition = c1;
+            int temperature = t1;
+            Console.WriteLine("The weather condition for today is:" + condition);
+            Console.WriteLine("The temperature for today is:" + temperature);
+            Console.ReadLine();
+           
+        }
     }
 }
