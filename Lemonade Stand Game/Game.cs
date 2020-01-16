@@ -14,10 +14,12 @@ namespace Lemonade_Stand_Game
         private int currentDay;
         private List<Day> days;
         Random random;
+        int playModeSelected;
         //Constructor
 
         public Game()
         {
+
             days = new List<Day>(7);
 
             random = new Random();
@@ -27,11 +29,11 @@ namespace Lemonade_Stand_Game
 
         public void StartGame()
         {
-
+            PlayMode();        
         }
 
         public void PlayMode()
-        {
+        {  
             Console.WriteLine("Select Playing Mode: \n1. 7 Days \n2. 14 Days \n3. 21 Days \n4. Help");
             int selection = 0;
             int.TryParse(Console.ReadLine(), out selection);
@@ -63,11 +65,9 @@ namespace Lemonade_Stand_Game
                     Console.ReadLine();
                     break;
             }
+            playModeSelected = selection;
         }
-        public void PickStoreItems()
-        {
-
-        }
+        
         public void ShowCurrentStats(string condition, int temperature, double Money, Day day)
         {
 
@@ -79,6 +79,21 @@ namespace Lemonade_Stand_Game
         public void DisplayRunningTotalPL()
         {
 
+        }
+        public void InstatiatePlayMode()
+        {
+            if (playModeSelected == 1)
+            {
+
+            }
+            else if (playModeSelected == 2)
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Error 414");
+            }
         }
     }
 }

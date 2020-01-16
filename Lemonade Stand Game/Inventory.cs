@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_Game
 {
-    class Inventory
+    public class Inventory
     {
 
         //Member Variables (HAS A)
@@ -19,8 +19,13 @@ namespace Lemonade_Stand_Game
         //Member Methods (CAN DO)
         public Inventory()
         {
+            lemons = new List<Lemon>();
+            iceCubes = new List<IceCube>();
+            cups = new List<Cup>();
+            sugarCubes = new List<SugarCube>();
 
         }
 
+        
     }
 }

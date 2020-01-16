@@ -19,7 +19,9 @@ namespace Lemonade_Stand_Game
         //Constructor
         public Player()
         {
-            name = "JOE";
+            //name = "JOE";
+            //inventory = ""; 
+            //wallet = 
            
         }
         //Member Methods (CAN DO)
