@@ -10,8 +10,12 @@ namespace Lemonade_Stand_Game
     {
 
         //Member Variables (HAS A)
-        public string name; 
+        public string name;
         //Constructor
+        public Item()
+        {
+            name = "Lemonade";
+        }
 
         //Member Methods (CAN DO)
 

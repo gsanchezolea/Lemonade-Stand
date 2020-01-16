@@ -15,6 +15,12 @@ namespace Lemonade_Stand_Game
         private double pricePerIceCube;
         private double pricePerCup;
         //Constructor
+        public Store()
+        {
+
+            
+
+        }
 
         //Member Methods (CAN DO)
 

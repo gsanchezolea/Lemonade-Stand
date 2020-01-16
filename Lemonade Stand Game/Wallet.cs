@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_Game
 {
-    class Wallet
+    public class Wallet
     {
 
         //Member Variables (HAS A)
@@ -18,6 +18,8 @@ namespace Lemonade_Stand_Game
             money = 20;
         }
         //Member Methods (CAN DO)
+
+        
 
 
         
