@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand_Game
 {
-    class SugarCube: Item
+    public class SugarCube: Item
     {
+        
     }
+
 }
