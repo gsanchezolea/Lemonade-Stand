@@ -17,8 +17,11 @@ namespace Lemonade_Stand_Game
         //Constructor
         public Store()
         {
+            pricePerLemon = 0.05;
+            pricePerSugarCube = 0.06;
+            pricePerIceCube = 0.04;
+            pricePerCup = 0.03;
 
-            
 
         }
 

@@ -26,6 +26,9 @@ namespace Lemonade_Stand_Game
         }
         //Member Methods (CAN DO)
 
+        public void AddLemonsToInventory()
+        {
 
+        }
     }
 }
