@@ -16,19 +16,40 @@ namespace Lemonade_Stand_Game
         public Recipe recipe;
         public Pitcher pitcher;
 
+
         //Constructor
         public Player()
         {
             //name = "JOE";
             //inventory = ""; 
             //wallet = 
-           
+
         }
         //Member Methods (CAN DO)
 
-        public void AddLemonsToInventory()
+        public int LemonQuantityRequested()
         {
+            int lemonQuantity = 0;
 
+            if (wallet.Money > 0)
+            {
+                Console.WriteLine("How many Lemons do you want?");
+                try
+                {
+                    int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+            }
+            else if (wall)
+            {
+                Console.WriteLine("You do not have enough money to buy that many Lemons");
+
+            }
+            return lemonQuantity;
         }
     }
 }

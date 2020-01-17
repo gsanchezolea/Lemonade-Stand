@@ -10,17 +10,17 @@ namespace Lemonade_Stand_Game
     {
 
         //Member Variables (HAS A)
-        private Player player;
-        private int currentDay;
-        private List<Day> days;
-        Random random;
-        int playModeSelected;
+        public Player player;
+        public int currentDay;
+        public List<Day> days;
+        public Random random;
+        public int playModeSelected;
         //Constructor
 
         public Game()
         {
 
-            days = new List<Day>(7);
+            days = new List<Day>();
 
             random = new Random();
 
