@@ -20,8 +20,8 @@ namespace Lemonade_Stand_Game
         public Game()
         {
 
-            days = new List<Day>();
-
+            days = new List<Day>(7);
+            Day day = new Day(random);
             random = new Random();
 
         }

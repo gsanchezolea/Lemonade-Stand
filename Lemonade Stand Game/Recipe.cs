@@ -20,7 +20,7 @@ namespace Lemonade_Stand_Game
             amountOfLemons = 0;
             amountOfSugarCubes = 0;
             amountOfIceCubes = 0;
-            pricePerCup = 0.03;
+            pricePerCup = 0.00;
         }
 
         //Member Methods (CAN DO)
@@ -55,7 +55,7 @@ namespace Lemonade_Stand_Game
         }
         public void ChangeLemonQuantity()
         {
-            Console.WriteLine("How many Lemons do you want?");
+            Console.WriteLine("How many Lemons do you want per cup?");
             int selection = 0;
             try
             {
@@ -69,7 +69,7 @@ namespace Lemonade_Stand_Game
         }
         public void ChangeSugarCubeQuantity()
         {
-            Console.WriteLine("How many Sugar Cubes do you want?");
+            Console.WriteLine("How many Sugar Cubes do you want per cup?");
             int selection = 0;
             try
             {
@@ -83,7 +83,7 @@ namespace Lemonade_Stand_Game
         }
         public void ChangeIceCubeQuantity()
         {
-            Console.WriteLine("How many Ice Cubes do you want?");
+            Console.WriteLine("How many Ice Cubes do you want per cup?");
             int selection = 0;
             try
             {

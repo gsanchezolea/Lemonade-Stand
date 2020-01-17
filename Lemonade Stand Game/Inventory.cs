@@ -55,5 +55,8 @@ namespace Lemonade_Stand_Game
                 sugarCubes.Add(new SugarCube());
             }
         }
+
+        //Methods for Removing from Pitcher Ingredients from Inventory
+       
     }
 }

@@ -11,6 +11,7 @@ namespace Lemonade_Stand_Game
 
         //Member Variables (HAS A)
         public string name;
+        
         public Inventory inventory;
         public Wallet wallet;
         public Recipe recipe;
@@ -20,7 +21,7 @@ namespace Lemonade_Stand_Game
         //Constructor
         public Player()
         {
-            //name = "JOE";
+            name = "JOE";
             //inventory = ""; 
             //wallet = 
 
@@ -51,5 +52,7 @@ namespace Lemonade_Stand_Game
             }
             return lemonQuantity;
         }
+
+        public void 
     }
 }
