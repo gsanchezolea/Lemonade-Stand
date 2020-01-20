@@ -11,7 +11,7 @@ namespace Lemonade_Stand_Game
 
         //Member Variables (HAS A)
         public string name;
-        
+
         public Inventory inventory;
         public Wallet wallet;
         public Recipe recipe;
@@ -45,7 +45,7 @@ namespace Lemonade_Stand_Game
                 }
 
             }
-            else if (wall)
+            else
             {
                 Console.WriteLine("You do not have enough money to buy that many Lemons");
 
@@ -53,6 +53,6 @@ namespace Lemonade_Stand_Game
             return lemonQuantity;
         }
 
-        public void 
+        
     }
 }
