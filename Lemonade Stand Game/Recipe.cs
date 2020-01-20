@@ -14,6 +14,7 @@ namespace Lemonade_Stand_Game
         public int amountOfSugarCubes;
         public int amountOfIceCubes;
         public double pricePerCup;
+        public int PitcherCreated;
         //Constructor
         public Recipe()
         {
@@ -108,6 +109,10 @@ namespace Lemonade_Stand_Game
                 Console.WriteLine(e.Message);
             }
             pricePerCup = selection;
+        }
+        public void PitcherCreated()
+        {
+            
         }
     }
 }

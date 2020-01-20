@@ -13,7 +13,7 @@ namespace Lemonade_Stand_Game
         public string condition;
         public int temperature;
         public List<string> weatherConditions;
-        Random ran;
+        public  Random ran;
         public string predictedForecast;
 
 

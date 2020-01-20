@@ -15,6 +15,7 @@ namespace Lemonade_Stand_Game
         //Constructor
         public Wallet()
         {
+
             money = 20;
         }
         //Member Methods (CAN DO)

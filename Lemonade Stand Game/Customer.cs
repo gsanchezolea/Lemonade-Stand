@@ -10,14 +10,37 @@ namespace Lemonade_Stand_Game
     {
 
         //Member Variables (HAS A)
-        public string name;
+        public string name = "customer";
         public int numOfLemons;
         public int numOfIceCubes;
         public int numOfSugarCubes;
         //Constructor
-
+        
         //Member Methods (CAN DO)
 
+            /// <summary>
+            /// have a method that takes in the recipe and weather for the current day
+            /// if the weather is poor then generate less of a random chance to buy
+            /// if the weather is nice generate high chance to buy
+            /// if the price per cup is overpriced dont buy
+            /// if the price per cup is priced well higher chance of buyings
+            /// 
+            /// </summary>
+        public void randomTemp()
+        {
+            
+        }
+        public void randomCondition()
+        {
 
+        }
+        public void randomMoney()
+        {
+
+        }
+        public void randomRecipe()
+        {
+
+        }
     }
 }

@@ -11,13 +11,25 @@ namespace Lemonade_Stand_Game
 
         //Member Variables (HAS A)
         public int cupsLeftInPitcher;
+        
         //Constructor
+        
         public Pitcher()
         {
             cupsLeftInPitcher = 15;
         }
         //Member Methods (CAN DO)
-
+        public void MakePitcher()
+        {
+            
+        }
+        public void PitcherForSell()
+        {
+            if(cupsLeftInPitcher == 0)
+            {
+                
+            } 
+        }
 
     }
 }
