@@ -10,9 +10,13 @@ namespace Lemonade_Stand_Game
     {
         static void Main(string[] args)
         {
-            Game Game = new Game();
-            Game.StartGame();
-            Store store = new Store();
+            //Game Game = new Game();
+            ////Game.StartGame();
+            //Store store = new Store();
+
+            Inventory inventory = new Inventory();
+            inventory.AddLemonsToInventory(10);
+            inventory.RemoveLemonsFromInventory(5);
             
 
         }
