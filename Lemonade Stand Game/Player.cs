@@ -28,30 +28,7 @@ namespace Lemonade_Stand_Game
         }
         //Member Methods (CAN DO)
 
-        public int LemonQuantityRequested()
-        {
-            int lemonQuantity = 0;
-
-            if (wallet.Money > 0)
-            {
-                Console.WriteLine("How many Lemons do you want?");
-                try
-                {
-                    int.Parse(Console.ReadLine());
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-
-            }
-            else
-            {
-                Console.WriteLine("You do not have enough money to buy that many Lemons");
-
-            }
-            return lemonQuantity;
-        }
+        
 
         
     }

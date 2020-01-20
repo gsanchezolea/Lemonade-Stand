@@ -10,10 +10,10 @@ namespace Lemonade_Stand_Game
     {
 
         //Member Variables (HAS A)
-       public double pricePerLemon;
+        public double pricePerLemon;
         public double pricePerSugarCube;
-       public double pricePerIceCube;
-       public double pricePerCup;
+        public double pricePerIceCube;
+        public double pricePerCup;
         public string stockUpOption;
         //Constructor
         public Store()
@@ -22,99 +22,202 @@ namespace Lemonade_Stand_Game
             pricePerSugarCube = 0.07;
             pricePerIceCube = 0.03;
             pricePerCup = 0.03;
-            
+
 
         }
 
 
-            public void VisitStore(Player player)
+        public void VisitStore(Player player)
         {
-            Console.WriteLine(player.name + "would you like to stock up on supplies? type yes or no to continue.");
+            Console.WriteLine(player.name + "would you like to stock up on supplies? Type yes or no to continue.");
             string stockUpOption = Console.ReadLine();
             if (stockUpOption == "yes")
             {
                 Console.WriteLine("Great! What would you like to buy? 1. lemons, 2. cups, 3.ice cubes, 4. sugar cubes");
-                int buyItems = int.Parse(Console.ReadLine());
+                int buyItems = 0;
+                try
+                {
+                    int.Parse(Console.ReadLine());
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
                 switch (buyItems)
                 {
                     case 1:
-                         string lemonBought = qtyOfLemons();
-                        addLemonsToInventory(lemonBought, player);
+                        int lemonsBought = LemonQuantitySelected(player);
+                        AddLemonsToInventory(lemonsBought, player);
+                        RemoveMoneyFromWallet(lemonsBought, pricePerLemon, player);
                         break;
+
                     case 2:
-                        string cupsBought = qtyOfCups();
-                        addCupsToInventory(cupsBought, player);
+                        int cupsBought = CupQuantitySelected(player);
+                        AddCupsToInventory(cupsBought, player);
+                        RemoveMoneyFromWallet(cupsBought, pricePerCup, player);
                         break;
+
                     case 3:
-                        string iceCubesBought = qtyOfIceCubes();
-                        addIceCubesToInventory(iceCubesBought, player);
+                        int iceCubesBought = IceCubeQuantitySelected(player);
+                        AddIceCubesToInventory(iceCubesBought, player);
+                        RemoveMoneyFromWallet(iceCubesBought, pricePerIceCube, player);
                         break;
+
                     case 4:
-                        string sugarCubesBought = qtyOfSugarCubes();
-                        addSugarCubesToInventory(sugarCubesBought, player);
+                        int sugarCubesBought = SugarCubeQuantitySelected(player);
+                        AddSugarCubesToInventory(sugarCubesBought, player);
+                        RemoveMoneyFromWallet(sugarCubesBought, pricePerSugarCube, player);
                         break;
 
-                }
-               
-
+                    default:
+                        break;
+                }                
             }
-                  
-            
-        }
-        public string qtyOfLemons()
+        }  
+        public int LemonQuantitySelected(Player player)
         {
-            
             Console.WriteLine("How many lemons would you like to buy?");
-            Console.WriteLine("10 lemons price = " + pricePerLemon * 10);
-            Console.WriteLine("20 lemons price = " + pricePerLemon * 20);
-            Console.WriteLine("50 lemons price = " + pricePerLemon * 50);
-            return Console.ReadLine();
-        }
-        public void addLemonsToInventory(string lemonBought, Player player)
-        {
-            //TODO Create a for loop that will run lemonBought number of times
-            //Inside the for loop, there will be a single line of code that adds 
-            //a single lemon to the player's inventory's lemon list
-            //Then, subtract money from player's wallet that equals lemonbought times priceperlemon
-        }
-         public string qtyOfCups()
-        {
-            Console.WriteLine("How many Cups would you like to buy?");
-            Console.WriteLine("25 cups price = " + pricePerCup * 25);
-            Console.WriteLine("35 cups price = " + pricePerCup * 35);
-            Console.WriteLine("55 cups price = " + pricePerCup * 55);
-            return Console.ReadLine();
-        }
-        public void addCupsToInventory(string cupsBought, Player player)
-        {
+            Console.WriteLine($"1. 10 Lemons for $" + pricePerLemon * 10 + " 2. 20 Lemons for " + pricePerLemon * 20 + " 3. 50 Lemons for " + pricePerLemon * 50);
+            int number = 0;
+            int.TryParse(Console.ReadLine(), out number);
 
+            switch (number)
+            {
+                case 10:
+                    Console.WriteLine(player + " has added " + number + "lemons to his inventory.");
+                    break;
+                case 20:
+                    Console.WriteLine(player + " has added " + number + "lemons to his inventory.");
+                    break;
+
+                case 50:
+                    Console.WriteLine(player + " has added " + number + "lemons to his inventory.");
+                    break;
+
+                default:
+                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    break;
+            }
+            return number;
         }
-        public string qtyOfIceCubes()
+        public int CupQuantitySelected(Player player)
+        {
+            Console.WriteLine("How many cups would you like to buy?");
+            Console.WriteLine($"1. 25 Cups for " + pricePerCup*25 +"2. 35 Cups for " + pricePerCup*35 + " 3. 55 Cups for " + pricePerCup * 55);
+            int number = 0;
+            int.TryParse(Console.ReadLine(), out number);
+
+            switch (number)
+            {
+                case 10:
+                    Console.WriteLine(player + " has added " + number + "cups to his inventory.");
+                    break;
+                case 20:
+                    Console.WriteLine(player + " has added " + number + "cups to his inventory.");
+                    break;
+
+                case 50:
+                    Console.WriteLine(player + " has added " + number + "cups to his inventory.");
+                    break;
+
+                default:
+                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    break;
+            }
+            return number;
+        }
+        public int IceCubeQuantitySelected(Player player)
         {
             Console.WriteLine("How many ice cubes would you like to buy?");
-            Console.WriteLine("60 ice cubes price = " + pricePerCup * 60);
-            Console.WriteLine("100 ice cubes price = " + pricePerCup * 100);
-            Console.WriteLine("120 ice cubes price = " + pricePerCup * 120);
-           return Console.ReadLine();
-        }
-        public void addIceCubesToInventory(string IceCubesBought, Player player)
-        {
+            Console.WriteLine($"1. 60 Ice Cubes for " + pricePerIceCube*60  + "2. 100 Ice Cubes for " + pricePerIceCube*100 + " 3. 120 Ice Cubes for " + pricePerIceCube*120);
+            int number = 0;
+            int.TryParse(Console.ReadLine(), out number);
 
-        }
+            switch (number)
+            {
+                case 10:
+                    Console.WriteLine(player + " has added " + number + "ice cubes to his inventory.");
+                    break;
+                case 20:
+                    Console.WriteLine(player + " has added " + number + "ice cubes to his inventory.");
+                    break;
 
-        public string qtyOfSugarCubes()
+                case 50:
+                    Console.WriteLine(player + " has added " + number + "ice cubes to his inventory.");
+                    break;
+
+                default:
+                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    break;
+            }
+            return number;
+        }
+        public int SugarCubeQuantitySelected(Player player)
         {
             Console.WriteLine("How many sugar cubes would you like to buy?");
-            Console.WriteLine("60 sugar cubes price = " + pricePerCup * 60);
-            Console.WriteLine("120 sugar cubes price = " + pricePerCup * 120);
-            Console.WriteLine("200 sugar cubes price = " + pricePerCup * 200);
-            return Console.ReadLine();
-        }
-        public void addSugarCubesToInventory(string sugarCubesBought, Player player)
-        {
+            Console.WriteLine($"1. 60 Sugar Cubes for " + pricePerSugarCube*60 + "2. 120 Sugar Cubes for " + pricePerSugarCube*120 + " 3. 200 Sugar Cubes for " + pricePerSugarCube*200);
+            int number = 0;
+            int.TryParse(Console.ReadLine(), out number);
 
+            switch (number)
+            {
+                case 10:
+                    Console.WriteLine(player + " has added " + number + "sugar cubes to his inventory.");
+                    break;
+                case 20:
+                    Console.WriteLine(player + " has added " + number + "sugar cubes to his inventory.");
+                    break;
+
+                case 50:
+                    Console.WriteLine(player + " has added " + number + "sugar cubes to his inventory.");
+                    break;
+
+                default:
+                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    break;
+            }
+            return number;
+        }
+        //Add Items to their respective list.
+        public void AddLemonsToInventory(int lemonsBought, Player player)
+        {
+            for (int i = 0; i < lemonsBought; i++)
+            {
+                player.inventory.lemons.Add(new Lemon());
+            }
+            //Create a method that removes money from wallet.
+        }
+        public void AddCupsToInventory(int cupsBought, Player player)
+        {
+            for (int i = 0; i < cupsBought; i++)
+            {
+                player.inventory.cups.Add(new Cup());
+            }
+        }
+        public void AddIceCubesToInventory(int iceCubesBought, Player player)
+        {
+            for (int i = 0; i < iceCubesBought; i++)
+            {
+                player.inventory.iceCubes.Add(new IceCube());
+            }
+        }
+        public void AddSugarCubesToInventory(int sugarCubesBought, Player player)
+        {
+            for (int i = 0; i < sugarCubesBought; i++)
+            {
+                player.inventory.sugarCubes.Add(new SugarCube());
+            }
+        }
+
+        //Remove Money from Wallet      
+
+        public void RemoveMoneyFromWallet(int itemsBought, double priceOfItem, Player player)
+        {
+            double result;
+            result = itemsBought * priceOfItem;
+            player.wallet.Money -= result;
         }
 
     }
-    
+
 }
