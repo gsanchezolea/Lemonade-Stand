@@ -14,7 +14,7 @@ namespace Lemonade_Stand_Game
         //Constructor
         public Item()
         {
-            name = "Lemonade";
+            
         }
 
         //Member Methods (CAN DO)
