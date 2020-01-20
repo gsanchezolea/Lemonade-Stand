@@ -11,6 +11,9 @@ namespace Lemonade_Stand_Game
 
         //Member Variables (HAS A)
         public string name;
+        public int numOfLemons;
+        public int numOfIceCubes;
+        public int numOfSugarCubes;
         //Constructor
 
         //Member Methods (CAN DO)
