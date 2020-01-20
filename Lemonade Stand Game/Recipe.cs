@@ -14,7 +14,7 @@ namespace Lemonade_Stand_Game
         public int amountOfSugarCubes;
         public int amountOfIceCubes;
         public double pricePerCup;
-        public int PitcherCreated;
+        
         //Constructor
         public Recipe()
         {
