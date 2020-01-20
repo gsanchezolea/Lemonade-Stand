@@ -21,6 +21,21 @@ namespace Lemonade_Stand_Game
             
         }
         //Member Methods (CAN DO)
+        public void RemoveLemonsFromInventory(Inventory inventory, Recipe recipe)
+        {
+            for (int i = 0; i < recipe.amountOfLemons; i++)
+            {
+                inventory.lemons.Remove(inventory.lemons[0]);
+            }
+        }
+        public void RemoveSugarFromInventory(Inventory inventory,Recipe recipe)
+        {
+            for (int i = 0; i < recipe.amountOfSugarCubes; i++)
+            {
+                inventory.sugarCubes.Remove(inventory.sugarCubes[0]);
+            }
+
+        }
         public void MakePitcher(Recipe recipe)
         {
           

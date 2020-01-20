@@ -19,7 +19,11 @@ namespace Lemonade_Stand_Game
             money = 20;
         }
         //Member Methods (CAN DO)
-
+        public void PointOfSale(Player player, double moneyIn)
+        {
+            money = money + moneyIn; 
+                
+        }
         
 
 
