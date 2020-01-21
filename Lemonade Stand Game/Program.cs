@@ -12,11 +12,7 @@ namespace Lemonade_Stand_Game
         {
 
 
-<<<<<<< HEAD
-=======
-           
->>>>>>> 9b9ad94665752bf693d5392689d79e7297e22d9e
-           
+
             
 
             Game Game = new Game();      
@@ -25,7 +21,7 @@ namespace Lemonade_Stand_Game
             Game.Instructions();
             Game.StartGame();
             
-            Store store = new Store();
+            
 
 
 

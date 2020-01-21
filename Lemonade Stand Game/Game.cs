@@ -24,8 +24,8 @@ namespace Lemonade_Stand_Game
         public Game()
         {
 
-            
 
+            store = new Store();
             player = new Player();
             days = new List<Day>();
             day = new Day(random);
@@ -38,7 +38,7 @@ namespace Lemonade_Stand_Game
         {
             for (int i = 0; i < NumOfDays; i++)
             {
-                days.Add(new Day());
+                days.Add(new Day(random));
             }
             
         }
