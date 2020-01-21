@@ -16,25 +16,33 @@ namespace Lemonade_Stand_Game
         //Constructor
 
         //Member Methods (CAN DO)
-        public Day(Random rng)
+        public Day()
         {
-            weather = new Weather(rng);
+            weather = new Weather();
             customers = new List<Customer>();
 
         }
 
-        public void RunDay()
+        public void RunDay(Weather weather, Store store, Player player, Recipe recipe, Random random)
         {
-           // weather.displayWeather();
-            //// mini master setup the day /////
-            ///
+            weather.WeatherForTheDay();
+            weather.ForecastedWeather();
+            store.VisitStore(player, recipe);
+            InstatiateCustomers(random);
+            
+            weather.DisplayWeather();
 
 
         }
         public void CheckEachCustomer(Customer customer)
         {
+<<<<<<< HEAD
             //foreach(string customertype in customers)
             //{
+=======
+            foreach (string customertype in customers)
+            {
+>>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
 
             //}
         }
@@ -77,15 +85,15 @@ namespace Lemonade_Stand_Game
             bool lemon;
             bool sugar;
 
-            iceCube = CompareRecipeIceCube(recipe,customer);
-            lemon = CompareRecipeLemon(recipe,customer);
+            iceCube = CompareRecipeIceCube(recipe, customer);
+            lemon = CompareRecipeLemon(recipe, customer);
             sugar = CompareRecipeLemon(recipe, customer);
 
             if (iceCube && lemon && sugar)
             {
                 return true;
             }
-            else if(lemon & sugar)
+            else if (lemon & sugar)
             {
                 return true;
             }
@@ -96,7 +104,7 @@ namespace Lemonade_Stand_Game
         }
         public bool ComparePrice(Recipe recipe, Customer customer)
         {
-            if(recipe.pricePerCup <= customer.customerPricePreference)
+            if (recipe.pricePerCup <= customer.customerPricePreference)
             {
                 return true;
             }
@@ -107,7 +115,11 @@ namespace Lemonade_Stand_Game
         }
         public bool CompareWeather(Weather weather, Customer customer)
         {
-            if(weather.condition == customer.customerWeatherConditionPreference)
+            if (weather.condition == customer.customerWeatherConditionPreference)
+            {
+                return true;
+            }
+            else
             {
                 return true;
 
@@ -117,7 +129,11 @@ namespace Lemonade_Stand_Game
 
         public void CheckPreferences()
         {
+<<<<<<< HEAD
             
+=======
+            if ()
+>>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
         }
         public void ComparePreferences(Recipe recipe, Weather weather, Customer customer)
         {
@@ -125,7 +141,7 @@ namespace Lemonade_Stand_Game
             {
                 if (recipe.amountOfIceCubes == customers[i].customerIceCubePreference && recipe.amountOfLemons == customers[i].customerLemonPreference && recipe.amountOfSugarCubes == customers[i].customerSugarCubePreference)
                 {
-                    if  (weather.temperature >= customers[i].customerTemperaturePreference)
+                    if (weather.temperature >= customers[i].customerTemperaturePreference)
                     {
                         if (weather.condition == "Sunny")
                         {
@@ -133,13 +149,13 @@ namespace Lemonade_Stand_Game
                             {
                                 //transaction happens
                             }
-                            
+
                         }
                     }
                 }
                 else if (recipe.amountOfIceCubes == customers[i].customerIceCubePreference && recipe.amountOfLemons == customers[i].customerLemonPreference)
                 {
-                   if (weather.temperature >= customers[i].customerTemperaturePreference)
+                    if (weather.temperature >= customers[i].customerTemperaturePreference)
                     {
                         if (weather.condition == "Rainy")
                         {
@@ -149,8 +165,22 @@ namespace Lemonade_Stand_Game
                 }
             }
         }
+        public void InstatiateCustomers(Random random)
+        {
+            int result;
+            result = random.Next(1, 100);
+            
+            for (int i = 0; i < result; i++)
+            {
+                customers.Add(new Customer());
+            }
+        }
 
+<<<<<<< HEAD
        
 }
+=======
+    }
+>>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
 }
 

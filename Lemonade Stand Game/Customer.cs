@@ -21,7 +21,7 @@ namespace Lemonade_Stand_Game
         public int customerTemperaturePreference;
         //Constructor   
 
-        public Customer(Random random)
+        public Customer()
 
         {
             customerWeatherCondition = new List<string> { "Sunny", "Rainy", "Cloudy", "Overcast", "Hazy" };
@@ -33,10 +33,7 @@ namespace Lemonade_Stand_Game
             customerLemonPreference = 0;
             customerSugarCubePreference = 0;
 
-            randomCustomerPrice(random);
-            randomCustomerTemperature(random);
-            randomCustomerWeatherCondition(random);
-            randomCustomerRecipe(random);
+           
         }
         //Member Methods (CAN DO)
 

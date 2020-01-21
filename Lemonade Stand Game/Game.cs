@@ -19,10 +19,17 @@ namespace Lemonade_Stand_Game
 
         public Game()
         {
+<<<<<<< HEAD
 
             days = new List<Day>();
             
+=======
+            player = new Player();
+            days = new List<Day>();
+            Day day = new Day(random);
+>>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
             random = new Random();
+            currentDay = 0;
 
         }
         //Member Methods (CAN DO)
