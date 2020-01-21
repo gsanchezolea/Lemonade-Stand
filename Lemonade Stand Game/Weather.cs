@@ -68,7 +68,7 @@ namespace Lemonade_Stand_Game
             Console.WriteLine("The forecast for tomorrow is: " + condition + temperature + 5);
         }
 
-        public void displayWeather()
+        public void DisplayWeather()
         {
             Console.WriteLine("The weather condition for today is:" + condition);
             Console.WriteLine("The temperature for today is:" + temperature);

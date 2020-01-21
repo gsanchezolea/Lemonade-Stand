@@ -19,10 +19,11 @@ namespace Lemonade_Stand_Game
 
         public Game()
         {
-
-            days = new List<Day>(7);
+            player = new Player();
+            days = new List<Day>();
             Day day = new Day(random);
             random = new Random();
+            currentDay = 0;
 
         }
         //Member Methods (CAN DO)
