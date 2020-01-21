@@ -17,18 +17,18 @@ namespace Lemonade_Stand_Game
         //Constructor
 
         //Member Methods (CAN DO)
-        public Day(Random random)
+        public Day()
         {
-            weather = new Weather(random);
+            weather = new Weather();
             customers = new List<Customer>();
 
         }
 
-        public void RunDay(Store store, Player player, Random random)
+        public void RunDay(Store store, Player player, Random random, Inventory inventory, Recipe recipe)
         {
-            weather.WeatherForTheDay();
+            weather.WeatherForTheDay(random);
             weather.ForecastedWeather();
-            store.VisitStore(player, player.recipe);
+            store.VisitStore(player, recipe, inventory);
             InstatiateCustomers(random);
 
             weather.DisplayWeather();
@@ -36,13 +36,7 @@ namespace Lemonade_Stand_Game
 
         }
 
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> 9b9ad94665752bf693d5392689d79e7297e22d9e
         public bool CompareRecipeLemon(Recipe recipe, Customer customer)
         {
             if (recipe.amountOfLemons == customer.customerLemonPreference)
@@ -124,14 +118,7 @@ namespace Lemonade_Stand_Game
             //return false;
         }
 
-<<<<<<< HEAD
-        public void CheckPreferences()
-        {
 
-        }
-=======
-
->>>>>>> 9b9ad94665752bf693d5392689d79e7297e22d9e
         public void ComparePreferences(Recipe recipe, Weather weather, Customer customer)
         {
             for (int i = 0; i < customers.Count; i++)
@@ -174,19 +161,5 @@ namespace Lemonade_Stand_Game
                 customers.Add(new Customer());
             }
         }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 9b9ad94665752bf693d5392689d79e7297e22d9e
     }
 }
-
-
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 9b9ad94665752bf693d5392689d79e7297e22d9e

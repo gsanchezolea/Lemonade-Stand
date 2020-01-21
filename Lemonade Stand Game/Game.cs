@@ -15,7 +15,8 @@ namespace Lemonade_Stand_Game
         public List<Day> days;
         public Random random;
         public int playModeSelected;
-
+        public Inventory inventory;
+        public Recipe recipe;
         public Store store;
 
         public Day day;
@@ -24,11 +25,11 @@ namespace Lemonade_Stand_Game
         public Game()
         {
 
-            
 
+            store = new Store();
             player = new Player();
             days = new List<Day>();
-            day = new Day(random);
+            day = new Day();
             random = new Random();
             currentDay = 0;
 
@@ -48,7 +49,7 @@ namespace Lemonade_Stand_Game
             PlayMode();
             for (int i = 0; i < days.Count; i++)
             {
-                days[i].RunDay(store,player,random);
+                days[i].RunDay(store,player,random,inventory,recipe);
             }
     
 
@@ -76,7 +77,7 @@ namespace Lemonade_Stand_Game
         }
         public void PlayMode()
         {  
-            Console.WriteLine("Select Playing Mode: \n1. 7 Days \n2. 14 Days \n3. 21 Days \n4. Help");
+            Console.WriteLine("Select Playing Mode: \n1. 7 Days \n2. 14 Days \n3. 21 Days");
             int selection = 0;
             int.TryParse(Console.ReadLine(), out selection);
 
@@ -98,17 +99,13 @@ namespace Lemonade_Stand_Game
                     Console.WriteLine("You have selected 21 Days");
                     AddDays(21);
                     Console.ReadLine();
-                    break;
-
-                case 4:
-                    Console.WriteLine("You have selected Help");
-                    Console.ReadLine();
-                    break;
+                    break;              
 
                 default:
                     Console.WriteLine("Wrong selection please try again");
                     Console.ReadLine();
-                    break;
+                    PlayMode();
+                    return;
             }
             playModeSelected = selection;
         }

@@ -24,15 +24,15 @@ namespace Lemonade_Stand_Game
             //ran = random;
             weatherConditions = new List<string> { "Sunny", "Rainy", "Cloudy", "Overcast", "Hazy" }; 
         }
-        public void WeatherForTheDay()
+        public void WeatherForTheDay(Random random)
         {
             int result;
-            result = ran.Next(0, 5);
+            result = random.Next(0, 5);
             condition = weatherConditions[result];
         }
-        public void TemperatureForTheDay()
+        public void TemperatureForTheDay(Random random)
         {
-            temperature = ran.Next(50, 90);
+            temperature = random.Next(50, 90);
             
         }
 
@@ -66,7 +66,10 @@ namespace Lemonade_Stand_Game
         public void ForecastedWeather()
         {
             ///to do random choose a days weather//
-            Console.WriteLine("The forecast for tomorrow is: " + condition + temperature + 5);
+            int result;
+            result = temperature + 5;
+            Console.WriteLine("The forecast for tomorrow is: " + condition + " and "+ result + " degrees.");
+            temperature = result - 5;
         }
 
         public void DisplayWeather()

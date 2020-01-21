@@ -12,9 +12,9 @@ namespace Lemonade_Stand_Game
         //Member Variables (HAS A)
         public string name;
 
-        public Inventory inventory;
+        
         public Wallet wallet;
-        public Recipe recipe;
+        
         public Pitcher pitcher;
 
 
@@ -22,7 +22,7 @@ namespace Lemonade_Stand_Game
         public Player()
         {
             name = "JOE";
-            //inventory = ""; 
+            
             //wallet = 
 
         }
