@@ -11,7 +11,13 @@ namespace Lemonade_Stand_Game
         static void Main(string[] args)
         {
 
+
+           
+           
+            
+
             Game Game = new Game();      
+
             Game.WelcomeMessage();
             Game.Instructions();
             Game.StartGame();

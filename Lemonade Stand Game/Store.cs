@@ -33,7 +33,55 @@ namespace Lemonade_Stand_Game
             int buyItems = 0;
             try
             {
+<<<<<<< HEAD
+                Console.WriteLine("Great! What would you like to buy? 1. lemons, 2. cups, 3.ice cubes, 4. sugar cubes");
+                int buyItems = 0;
+                try
+                {
+                    int.Parse(Console.ReadLine());
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                switch (buyItems)
+                {
+                    case 1:
+                        int lemonsBought = LemonQuantitySelected(player);
+                        AddLemonsToInventory(lemonsBought, player);
+                        RemoveMoneyFromWallet(lemonsBought, pricePerLemon, player);
+                        break;
+
+                    case 2:
+                        int cupsBought = CupQuantitySelected(player);
+                        AddCupsToInventory(cupsBought, player);
+                        RemoveMoneyFromWallet(cupsBought, pricePerCup, player);
+                        break;
+
+                    case 3:
+                        int iceCubesBought = IceCubeQuantitySelected(player);
+                        AddIceCubesToInventory(iceCubesBought, player);
+                        RemoveMoneyFromWallet(iceCubesBought, pricePerIceCube, player);
+                        break;
+
+                    case 4:
+                        int sugarCubesBought = SugarCubeQuantitySelected(player);
+                        AddSugarCubesToInventory(sugarCubesBought, player);
+                        RemoveMoneyFromWallet(sugarCubesBought, pricePerSugarCube, player);
+                        break;
+
+                    default:
+                        break;
+
+                }
+               
+            }
+            else if (stockUpOption == "no")
+            {
+                
+=======
                 int.Parse(Console.ReadLine());
+>>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
             }
             catch (Exception e)
             {

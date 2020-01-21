@@ -20,18 +20,28 @@ namespace Lemonade_Stand_Game
 
         public Game()
         {
+
             player = new Player();
             days = new List<Day>();
-            day = new Day();
+            day = new Day(random);
             random = new Random();
             currentDay = 0;
 
         }
         //Member Methods (CAN DO)
-
-        public void StartGame()
+        public void AddDays(int NumOfDays)
         {
-            PlayMode();        
+            for (int i = 0; i < NumOfDays; i++)
+            {
+                days.Add(new Day(random));
+            }
+            
+        }
+        public void StartGame(Weather weather, Store store, Player player, Recipe recipe, Day day, Random random)
+        {
+            PlayMode();
+            day.RunDay(weather,store,player,recipe,random);
+            
         }
         public void WelcomeMessage()
         {
@@ -50,7 +60,7 @@ namespace Lemonade_Stand_Game
             Console.WriteLine("Buy cups, lemons, sugar, and ice cubes, then set your recipe based on the weather and conditions.\nStart with the basic recipe, but try to vary the recipe and see if you can do better.\nLastly, set your price and sell your lemonade at the stand. Try changing up the price based on the weather conditions as well.");
             Console.ReadLine();
             Console.WriteLine("At the end of the game, you'll see how much money you made. Write it down and play again to try and beat your score!");
-            Console.WriteLine("Hit enter when you are ready to play Lemonade Stand!");
+            Console.WriteLine("Hit enter when you are ready to start selling Lemonade!");
             Console.ReadLine();
         }
         public void PlayMode()
@@ -63,16 +73,19 @@ namespace Lemonade_Stand_Game
             {
                 case 1:
                     Console.WriteLine("You have selected 7 Days");
+                    AddDays(7);
                     Console.ReadLine();
                     break;
 
                 case 2:
                     Console.WriteLine("You have selected 14 Days");
+                    AddDays(14);
                     Console.ReadLine();
                     break;
 
                 case 3:
                     Console.WriteLine("You have selected 21 Days");
+                    AddDays(21);
                     Console.ReadLine();
                     break;
 

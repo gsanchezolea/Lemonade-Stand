@@ -16,9 +16,9 @@ namespace Lemonade_Stand_Game
         //Constructor
 
         //Member Methods (CAN DO)
-        public Day()
+        public Day(Random random)
         {
-            weather = new Weather();
+            weather = new Weather(random);
             customers = new List<Customer>();
 
         }
@@ -29,18 +29,12 @@ namespace Lemonade_Stand_Game
             weather.ForecastedWeather();
             store.VisitStore(player, recipe);
             InstatiateCustomers(random);
-            
+
             weather.DisplayWeather();
 
 
         }
-        public void CheckEachCustomer(Customer customer)
-        {
-            foreach (string customertype in customers)
-            {
 
-            }
-        }
         public bool CompareRecipeLemon(Recipe recipe, Customer customer)
         {
             if (recipe.amountOfLemons == customer.customerLemonPreference)
@@ -117,13 +111,12 @@ namespace Lemonade_Stand_Game
             else
             {
                 return true;
+
             }
+            return false;
         }
 
-        public void CheckPreferences()
-        {
-            if () ;
-        }
+
         public void ComparePreferences(Recipe recipe, Weather weather, Customer customer)
         {
             for (int i = 0; i < customers.Count; i++)
@@ -148,7 +141,9 @@ namespace Lemonade_Stand_Game
                     {
                         if (weather.condition == "Rainy")
                         {
+
                             if (recipe.pricePerCup <= customers[i].customerPricePreference) ;
+
                         }
                     }
                 }
@@ -158,12 +153,16 @@ namespace Lemonade_Stand_Game
         {
             int result;
             result = random.Next(1, 100);
-            
+
             for (int i = 0; i < result; i++)
             {
                 customers.Add(new Customer());
             }
         }
-
     }
 }
+
+
+
+
+
