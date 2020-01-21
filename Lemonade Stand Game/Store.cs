@@ -74,7 +74,7 @@ namespace Lemonade_Stand_Game
                     return;
 
                 case 6:
-                    //RunIndividualDay();
+                    //go to actual 
                 default:
                     Console.WriteLine("You have selected an incorrect option please try again");
                     break;

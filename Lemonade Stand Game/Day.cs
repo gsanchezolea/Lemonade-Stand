@@ -23,13 +23,13 @@ namespace Lemonade_Stand_Game
 
         }
 
-        public void RunDay(Weather weather, Store store, Player player, Recipe recipe)
+        public void RunDay(Weather weather, Store store, Player player, Recipe recipe, Random random)
         {
             weather.WeatherForTheDay();
             weather.ForecastedWeather();
             store.VisitStore(player, recipe);
+            InstatiateCustomers(random);
             
-            //customer interacts with player through each day
             weather.DisplayWeather();
 
 
@@ -154,7 +154,16 @@ namespace Lemonade_Stand_Game
                 }
             }
         }
-
+        public void InstatiateCustomers(Random random)
+        {
+            int result;
+            result = random.Next(1, 100);
+            
+            for (int i = 0; i < result; i++)
+            {
+                customers.Add(new Customer());
+            }
+        }
 
     }
 }
