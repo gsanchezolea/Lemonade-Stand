@@ -18,6 +18,7 @@ namespace Lemonade_Stand_Game
         public double customerPricePreference;
         public string customerWeatherConditionPreference;
         public List<string> customerWeatherCondition;
+        public int customerTemperaturePreference;
         //Constructor   
 
         public Customer(Random random)
@@ -25,6 +26,17 @@ namespace Lemonade_Stand_Game
         {
             customerWeatherCondition = new List<string> { "Sunny", "Rainy", "Cloudy", "Overcast", "Hazy" };
             customerRecipe = new List<int> { customerLemonPreference, customerIceCubePreference, customerSugarCubePreference };
+            customerPricePreference = 0;
+            customerWeatherConditionPreference = null;
+            customerTemperaturePreference = 0;
+            customerSugarCubePreference = 0;
+            customerLemonPreference = 0;
+            customerSugarCubePreference = 0;
+
+            randomCustomerPrice(random);
+            randomCustomerTemperature(random);
+            randomCustomerWeatherCondition(random);
+            randomCustomerRecipe(random);
         }
         //Member Methods (CAN DO)
 
@@ -43,9 +55,11 @@ namespace Lemonade_Stand_Game
         //    customerIceCubePreference = 4;
         //    customerSugarCubePreference = 4;
         //}
-        public void randomTemp(Random random)
+        public void randomCustomerTemperature(Random random)
         {
-           
+            int result;
+            result = random.Next(50, 90);
+            customerTemperaturePreference = result;
         }
         public void randomCustomerWeatherCondition(Random random)
         {
@@ -54,7 +68,7 @@ namespace Lemonade_Stand_Game
             result = random.Next(0, 5);
             customerWeatherConditionPreference = customerWeatherCondition[result];           
         }
-        public void randomCustomerMoneyInWallet(Random random)
+        public void randomCustomerPrice(Random random)
         {
             int result;
             result = random.Next(0, 3);
@@ -70,35 +84,8 @@ namespace Lemonade_Stand_Game
             {
                 customerPricePreference = 0.20;
             }
-        }
-        //public void randomAmountCustomerIsWillingToSpend(Random random, Recipe recipe, Wallet wallet)
-        //{
-        //    if (customerPricePreference > recipe.pricePerCup)
-        //    {
-        //        Console.WriteLine("Customer has bought a lemonade");
-        //        recipe.pricePerCup += wallet.Money;
-        //    }
-        //    else if(customerPricePreference == recipe.pricePerCup)
-        //    {
-        //        int result;
-        //        result = random.Next(0, 2);
-        //        if (result == 0)
-        //        {
-        //            Console.WriteLine("Customer has bought a lemonade");
-        //            recipe.pricePerCup += wallet.Money;
-        //        }
-        //        else 
-        //        {
-        //            Console.WriteLine("Customer did not buy");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Customer did not buy");
-        //    }
-        //}
-       
-        public void GenerateCustomerRecipePeference(Random random)
+        }           
+        public void randomCustomerRecipe(Random random)
         {
             for (int i = 0; i < customerRecipe.Count; i++)
             {
