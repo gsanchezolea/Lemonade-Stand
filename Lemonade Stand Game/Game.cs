@@ -15,16 +15,20 @@ namespace Lemonade_Stand_Game
         public List<Day> days;
         public Random random;
         public int playModeSelected;
+
         public Store store;
+
+        public Day day;
         //Constructor
 
         public Game()
         {
+
             
 
             player = new Player();
             days = new List<Day>();
-            //Day day = new Day(random);
+            day = new Day(random);
             random = new Random();
             currentDay = 0;
 
@@ -38,6 +42,7 @@ namespace Lemonade_Stand_Game
             }
             
         }
+
         public void StartGame()
         {
             PlayMode();
@@ -46,6 +51,7 @@ namespace Lemonade_Stand_Game
                 days[i].RunDay(store,player,random);
             }
     
+
             
         }
         public void WelcomeMessage()
