@@ -14,8 +14,10 @@ namespace Lemonade_Stand_Game
         public int numOfLemons;
         public int numOfIceCubes;
         public int numOfSugarCubes;
-        //Constructor
-        public Customer()
+        //Constructor   
+
+        public Customer(Random random)
+
         {
 
         }
@@ -29,21 +31,31 @@ namespace Lemonade_Stand_Game
             /// if the price per cup is priced well higher chance of buyings
             /// 
             /// </summary>
-        public void randomTemp()
+            /// 
+        public void StandardRecipe()
+        {
+            numOfLemons = 4;
+            numOfIceCubes = 4;
+            numOfSugarCubes = 4;
+        }
+        public void randomTemp(Random random)
         {
             
         }
-        public void randomCondition()
+        public void randomCondition(Random random)
         {
-
+            
         }
-        public void randomMoney()
+        public void randomMoney(Random random)
         {
+            if ()
+            {
 
+            }
         }
-        public void randomRecipe()
+        public void randomRecipe(Random random)
         {
-
+        
         }
 
 
