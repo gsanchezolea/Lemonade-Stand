@@ -210,7 +210,7 @@ namespace Lemonade_Stand_Game
         }
 
         //Remove Money from Wallet      
-
+        //SOLID:  Used the Open/Closed Principle.  Lines 213-219
         public void RemoveMoneyFromWallet(int itemsBought, double priceOfItem, Player player)
         {
             double result;

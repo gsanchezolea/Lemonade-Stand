@@ -21,6 +21,7 @@ namespace Lemonade_Stand_Game
             
         }
         //Member Methods (CAN DO)
+        //SOLID: Used the Single Responsibility Principle.  Lines 24-62
         public void RemoveLemonsFromInventory(Inventory inventory, Recipe recipe)
         {
             for (int i = 0; i < recipe.amountOfLemons; i++)
