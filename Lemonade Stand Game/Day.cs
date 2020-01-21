@@ -122,7 +122,7 @@ namespace Lemonade_Stand_Game
 
         public void CheckPreferences()
         {
-            if ()
+            if () ;
         }
         public void ComparePreferences(Recipe recipe, Weather weather, Customer customer)
         {
@@ -148,7 +148,7 @@ namespace Lemonade_Stand_Game
                     {
                         if (weather.condition == "Rainy")
                         {
-                            if (recipe.pricePerCup <= customers[i].customerPricePreference)
+                            if (recipe.pricePerCup <= customers[i].customerPricePreference) ;
                         }
                     }
                 }

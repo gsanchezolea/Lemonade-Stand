@@ -15,13 +15,14 @@ namespace Lemonade_Stand_Game
         public List<Day> days;
         public Random random;
         public int playModeSelected;
+        public Day day;
         //Constructor
 
         public Game()
         {
             player = new Player();
             days = new List<Day>();
-            Day day = new Day(random);
+            day = new Day();
             random = new Random();
             currentDay = 0;
 
