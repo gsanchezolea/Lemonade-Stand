@@ -27,8 +27,22 @@ namespace Lemonade_Stand_Game
 
         }
         //Member Methods (CAN DO)
+        public void InventoryAccess(Inventory inventory)
+        {
+            
+        }
+        public void WalletAccess(Wallet wallet)
+        {
 
-        
+        }
+        public void RecipeAccess(Recipe recipe)
+        {
+
+        }
+        public void PitcherAccess(Pitcher pitcher)
+        {
+
+        }
 
         
     }

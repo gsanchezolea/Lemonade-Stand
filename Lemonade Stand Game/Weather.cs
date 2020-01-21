@@ -19,8 +19,9 @@ namespace Lemonade_Stand_Game
 
 
         //Constructor
-        public Weather()
+        public Weather(Random random)
         {
+            ran = random;
             weatherConditions = new List<string> { "Sunny", "Rainy", "Cloudy", "Overcast", "Hazy" }; 
         }
         public void WeatherForTheDay()

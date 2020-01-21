@@ -11,7 +11,7 @@ namespace Lemonade_Stand_Game
 
         //Member Variables (HAS A)
 
-        //public Weather weather;
+        public Weather weather;
         public List<Customer> customers;
         //Constructor
 
@@ -33,10 +33,10 @@ namespace Lemonade_Stand_Game
         }
         public void CheckEachCustomer(Customer customer)
         {
-            foreach(string customertype in customers)
-            {
+            //foreach(string customertype in customers)
+            //{
 
-            }
+            //}
         }
         public bool CompareRecipeLemon(Recipe recipe, Customer customer)
         {
@@ -110,12 +110,14 @@ namespace Lemonade_Stand_Game
             if(weather.condition == customer.customerWeatherConditionPreference)
             {
                 return true;
+
             }
+            return false;
         }
 
         public void CheckPreferences()
         {
-            if()
+            
         }
         public void ComparePreferences(Recipe recipe, Weather weather, Customer customer)
         {
@@ -141,28 +143,14 @@ namespace Lemonade_Stand_Game
                     {
                         if (weather.condition == "Rainy")
                         {
-                            if (recipe.pricePerCup <= customers[i].customerPricePreference)
+                            //if (recipe.pricePerCup <= customers[i].customerPricePreference)
                         }
                     }
                 }
             }
         }
 
-        public void 
-        if(actual price is <= customer price)
-            if(actual weather condition is == sunny)
-                if(actual temperature is >= 68)
-                    if(actual recipe == customer recipe)
-                    else if(actual recipe + 1 == customer recipe)
-                            {gives money to player}
-                    else 
-                            player doesnt receive money
-            else if(actual weather condition is == customer customer)//cloudy
-                    if(actual temperature is >=72)
-                        if(actual recipe == customer recipe)
-                        else if(actual recipe + 1== customer recipe)
-                    
-        else
-            customer doesnt buy
+       
 }
 }
+

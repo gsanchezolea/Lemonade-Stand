@@ -12,8 +12,8 @@ namespace Lemonade_Stand_Game
         {
 
             Game Game = new Game();
-            Weather weather = new Weather();
-            Random random1 = new Random();
+           
+            
             Game.WelcomeMessage();
             Game.Instructions();
             Game.StartGame();

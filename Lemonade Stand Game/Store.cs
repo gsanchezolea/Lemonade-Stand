@@ -71,7 +71,13 @@ namespace Lemonade_Stand_Game
 
                     default:
                         break;
-                }                
+
+                }
+               
+            }
+            else if (stockUpOption == "no")
+            {
+                
             }
         }  
         public int LemonQuantitySelected(Player player)
