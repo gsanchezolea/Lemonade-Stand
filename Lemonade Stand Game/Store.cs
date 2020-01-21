@@ -33,9 +33,8 @@ namespace Lemonade_Stand_Game
             int buyItems = 0;
             try
             {
-<<<<<<< HEAD
                 Console.WriteLine("Great! What would you like to buy? 1. lemons, 2. cups, 3.ice cubes, 4. sugar cubes");
-                int buyItems = 0;
+                int buyItems1 = 0;
                 try
                 {
                     int.Parse(Console.ReadLine());
@@ -44,7 +43,7 @@ namespace Lemonade_Stand_Game
                 {
                     Console.WriteLine(e.Message);
                 }
-                switch (buyItems)
+                switch (buyItems1)
                 {
                     case 1:
                         int lemonsBought = LemonQuantitySelected(player);
@@ -73,15 +72,7 @@ namespace Lemonade_Stand_Game
                     default:
                         break;
 
-                }
-               
-            }
-            else if (stockUpOption == "no")
-            {
-                
-=======
-                int.Parse(Console.ReadLine());
->>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
+                } 
             }
             catch (Exception e)
             {

@@ -13,6 +13,7 @@ namespace Lemonade_Stand_Game
 
         public Weather weather;
         public List<Customer> customers;
+
         //Constructor
 
         //Member Methods (CAN DO)
@@ -23,29 +24,22 @@ namespace Lemonade_Stand_Game
 
         }
 
-        public void RunDay(Weather weather, Store store, Player player, Recipe recipe, Random random)
+        public void RunDay(Store store, Player player, Random random)
         {
             weather.WeatherForTheDay();
             weather.ForecastedWeather();
-            store.VisitStore(player, recipe);
+            store.VisitStore(player, player.recipe);
             InstatiateCustomers(random);
-            
+
             weather.DisplayWeather();
 
 
         }
-        public void CheckEachCustomer(Customer customer)
-        {
-<<<<<<< HEAD
-            //foreach(string customertype in customers)
-            //{
-=======
-            foreach (string customertype in customers)
-            {
->>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
 
-            //}
-        }
+
+
+
+
         public bool CompareRecipeLemon(Recipe recipe, Customer customer)
         {
             if (recipe.amountOfLemons == customer.customerLemonPreference)
@@ -124,16 +118,12 @@ namespace Lemonade_Stand_Game
                 return true;
 
             }
-            return false;
+            //return false;
         }
 
         public void CheckPreferences()
         {
-<<<<<<< HEAD
-            
-=======
-            if ()
->>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
+
         }
         public void ComparePreferences(Recipe recipe, Weather weather, Customer customer)
         {
@@ -169,18 +159,17 @@ namespace Lemonade_Stand_Game
         {
             int result;
             result = random.Next(1, 100);
-            
+
             for (int i = 0; i < result; i++)
             {
                 customers.Add(new Customer());
             }
         }
 
-<<<<<<< HEAD
-       
-}
-=======
+
+
     }
->>>>>>> d98d849be4f5da709e85dea6e9121ef3ee5d0b3d
 }
+
+
 
