@@ -15,10 +15,11 @@ namespace Lemonade_Stand_Game
         public List<string> weatherConditions;
         public  Random ran;
         public string predictedForecast;
+        public int predictedTemperature;
 
 
         //Constructor
-        public Weather(Random random)
+        public Weather()
         {
             weatherConditions = new List<string> { "Sunny", "Rainy", "Cloudy", "Overcast", "Hazy" }; 
         }
@@ -31,13 +32,12 @@ namespace Lemonade_Stand_Game
         public void TemperatureForTheDay()
         {
             temperature = ran.Next(50, 90);
+            
         }
 
         //Member Methods (CAN DO)
-        public void ForecastedTemp(Random random)
-        {
-            temperature = ran.Next(50, 90);
-        }
+       
+        
         public void  ForecastedCondition(Random random)
         {
             int condition = ran.Next(1,6);
@@ -65,7 +65,7 @@ namespace Lemonade_Stand_Game
         public void ForecastedWeather()
         {
             ///to do random choose a days weather//
-            Console.WriteLine("The forecast for tomorrow is: " + condition + temperature);
+            Console.WriteLine("The forecast for tomorrow is: " + condition + temperature + 5);
         }
 
         public void displayWeather()
@@ -74,12 +74,8 @@ namespace Lemonade_Stand_Game
             Console.WriteLine("The temperature for today is:" + temperature);
            
             Console.ReadLine();
-            //foreach (string weathercondition in weatherConditions)
-            //{
-            //    Console.WriteLine(weathercondition);
-            //}
-            ///
-            ////////////////still need to setup predicted forecast////////////
+            
+            
         }
 
     }

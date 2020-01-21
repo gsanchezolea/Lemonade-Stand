@@ -10,7 +10,11 @@ namespace Lemonade_Stand_Game
     {
         static void Main(string[] args)
         {
+
             Game Game = new Game();
+            Weather weather = new Weather();
+            Random random1 = new Random();
+            weather.ForecastedTemp(random1);
             Game.StartGame();
             Store store = new Store();
 

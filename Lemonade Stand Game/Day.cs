@@ -11,19 +11,19 @@ namespace Lemonade_Stand_Game
 
         //Member Variables (HAS A)
 
-        public Weather weather;
+        //public Weather weather;
         public List<Customer> customers;
         //Constructor
 
         //Member Methods (CAN DO)
         public Day(Random rng)
         {
-            weather = new Weather(rng);
+           // weather = new Weather(rng);
         }
         
         public void RunDay()
         {
-            weather.displayWeather();
+           // weather.displayWeather();
             //// mini master setup the day /////
         }
     }
