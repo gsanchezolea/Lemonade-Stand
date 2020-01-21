@@ -18,12 +18,9 @@ namespace Lemonade_Stand_Game
         //Member Methods (CAN DO)
         public Day(Random rng)
         {
-<<<<<<< HEAD
             weather = new Weather(rng);
             customers = new List<Customer>();
-=======
-           // weather = new Weather(rng);
->>>>>>> b57f9991c6b5930a8d1b70e10cac91b71aab5867
+
         }
 
         public void RunDay()
