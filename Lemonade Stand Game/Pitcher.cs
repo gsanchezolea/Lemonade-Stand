@@ -28,7 +28,7 @@ namespace Lemonade_Stand_Game
                 inventory.lemons.Remove(inventory.lemons[0]);
             }
         }
-        public void RemoveSugarFromInventory(Inventory inventory,Recipe recipe)
+        public void RemoveSugarCubesFromInventory(Inventory inventory,Recipe recipe)
         {
             for (int i = 0; i < recipe.amountOfSugarCubes; i++)
             {
@@ -36,17 +36,30 @@ namespace Lemonade_Stand_Game
             }
 
         }
-        public void MakePitcher(Recipe recipe)
+        public void RemoveIceCubesFromInventory(Inventory inventory, Recipe recipe)
         {
-          
-        }
-        public void PitcherForSell(Player player)
-        {
-            if(cupsLeftInPitcher == 0)
+            for (int i = 0; i < recipe.amountOfIceCubes; i++)
             {
-                player.pitcher.pitchers.Add(new Pitcher());
-            } 
+                inventory.iceCubes.Remove(inventory.iceCubes[0]);
+            }
         }
+        public void RemoveCupsFromInventory(Inventory inventory, Recipe recipe)
+        {
+            for (int i = 0; i < cupsLeftInPitcher; i++)
+            {
+                inventory.cups.Remove(inventory.cups[0]);
+            }
+        }
+
+        
+            public void RemoveItemsFromInventory(Inventory inventory, Recipe recipe)
+        {
+            RemoveLemonsFromInventory(inventory, recipe);
+            RemoveSugarCubesFromInventory(inventory, recipe);
+            RemoveIceCubesFromInventory(inventory, recipe);
+            RemoveCupsFromInventory(inventory, recipe);
+        }
+        
 
     }
 }

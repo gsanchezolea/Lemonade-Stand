@@ -15,7 +15,10 @@ namespace Lemonade_Stand_Game
         public int numOfIceCubes;
         public int numOfSugarCubes;
         //Constructor
-        
+        public Customer()
+        {
+
+        }
         //Member Methods (CAN DO)
 
             /// <summary>
@@ -41,6 +44,26 @@ namespace Lemonade_Stand_Game
         public void randomRecipe()
         {
 
+        }
+
+
+
+
+        public int RandomLogic(Random random)
+        {
+            
+            result = random.Next(0, 8);
+            return result;
+        }
+
+        public void GenerateCustomerRecipePeference(Random random)
+        {
+            int result;
+            result = random.Next(0, 8);
+            for (int i = 0; i < 3; i++)
+            {
+
+            }
         }
     }
 }

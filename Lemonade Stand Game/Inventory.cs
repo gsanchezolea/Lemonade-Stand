@@ -14,7 +14,7 @@ namespace Lemonade_Stand_Game
         public List<IceCube> iceCubes;
         public List<Cup> cups;
         public List<SugarCube> sugarCubes;
-        //Constructor
+        
 
         //Constructor
         public Inventory()
@@ -29,34 +29,34 @@ namespace Lemonade_Stand_Game
    
 
         //Methods for Removing from Pitcher Ingredients from Inventory
-        public void RemoveLemonsFromInventory(int lemonsFromDay)
-        {
-            for (int i = 0; i < lemonsFromDay; i++)
-            {
-                lemons.Remove(lemons[0]);
-            }
-        }
-        public void RemoveIceCubesFromInventory(int iceCubesFromDay)
-        {
-            for (int i = 0; i < iceCubesFromDay; i++)
-            {
-                iceCubes.Remove(iceCubes[0]);
-            }
-        }
-        public void RemoveCupsFromInventory(int cupsFromDay)
-        {
-            for (int i = 0; i < cupsFromDay; i++)
-            {
-                cups.Remove(cups[0]);
-            }
-        }
-        public void RemoveSugarCubesFromInventory(int sugarCubesFromDay)
-        {
-            for (int i = 0; i < sugarCubesFromDay; i++)
-            {
-                sugarCubes.Remove(sugarCubes[0]);
-            }
-        }
+        //public void RemoveLemonsFromInventory(int lemonsFromDay)
+        //{
+        //    for (int i = 0; i < lemonsFromDay; i++)
+        //    {
+        //        lemons.Remove(lemons[0]);
+        //    }
+        //}
+        //public void RemoveIceCubesFromInventory(int iceCubesFromDay)
+        //{
+        //    for (int i = 0; i < iceCubesFromDay; i++)
+        //    {
+        //        iceCubes.Remove(iceCubes[0]);
+        //    }
+        //}
+        //public void RemoveCupsFromInventory(int cupsFromDay)
+        //{
+        //    for (int i = 0; i < cupsFromDay; i++)
+        //    {
+        //        cups.Remove(cups[0]);
+        //    }
+        //}
+        //public void RemoveSugarCubesFromInventory(int sugarCubesFromDay)
+        //{
+        //    for (int i = 0; i < sugarCubesFromDay; i++)
+        //    {
+        //        sugarCubes.Remove(sugarCubes[0]);
+        //    }
+        //}
 
     }
 }
