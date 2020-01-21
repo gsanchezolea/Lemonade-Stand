@@ -30,12 +30,31 @@ namespace Lemonade_Stand_Game
         public void VisitStore(Player player, Recipe recipe, Inventory inventory)
         {
             Console.WriteLine("What would you like to buy? 1. Lemons, 2. Cups, 3.Ice Cubes, 4. Sugar Cubes, 5. To Recipe, 6. Run Day");
+<<<<<<< HEAD
 
             int buyItems = 0;
             int.TryParse(Console.ReadLine(), out buyItems);
           
            
 
+=======
+            
+            int buyItems = 0;
+            
+            
+                
+                
+                try
+                {
+                    int.Parse(Console.ReadLine());
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                
+            
+>>>>>>> cd3af4eb1c551dae7978b8babed3ccaac35fbbcf
             switch (buyItems)
             {
                 case 1:

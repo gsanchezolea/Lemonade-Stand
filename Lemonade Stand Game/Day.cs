@@ -27,6 +27,10 @@ namespace Lemonade_Stand_Game
         public void RunDay(Store store, Player player, Random random, Inventory inventory, Recipe recipe)
         {
             weather.WeatherForTheDay(random);
+<<<<<<< HEAD
+=======
+            weather.TemperatureForTheDay(random);
+>>>>>>> cd3af4eb1c551dae7978b8babed3ccaac35fbbcf
             weather.ForecastedWeather();
             store.VisitStore(player, recipe, inventory);
             InstatiateCustomers(random);
@@ -144,7 +148,10 @@ namespace Lemonade_Stand_Game
                         if (weather.condition == "Rainy")
                         {
 
-                            if (recipe.pricePerCup <= customers[i].customerPricePreference) ;
+                            if (recipe.pricePerCup <= customers[i].customerPricePreference)
+                            {
+
+                            }
 
                         }
                     }
@@ -162,4 +169,8 @@ namespace Lemonade_Stand_Game
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cd3af4eb1c551dae7978b8babed3ccaac35fbbcf

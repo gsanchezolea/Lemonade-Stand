@@ -39,7 +39,7 @@ namespace Lemonade_Stand_Game
         {
             for (int i = 0; i < NumOfDays; i++)
             {
-                days.Add(new Day());
+                days.Add(new Day(random));
             }
             
         }

@@ -21,7 +21,7 @@ namespace Lemonade_Stand_Game
         //Constructor
         public Weather()
         {
-            //ran = random;
+           
             weatherConditions = new List<string> { "Sunny", "Rainy", "Cloudy", "Overcast", "Hazy" }; 
         }
         public void WeatherForTheDay(Random random)
@@ -68,8 +68,14 @@ namespace Lemonade_Stand_Game
             ///to do random choose a days weather//
             int result;
             result = temperature + 5;
+<<<<<<< HEAD
             Console.WriteLine("The forecast for tomorrow is: " + condition + " and "+ result + " degrees.");
             temperature = result - 5;
+=======
+            Console.WriteLine("The forecast for tomorrow is: " + condition +" and " + result + " degrees. ");
+            temperature = result - 5;
+
+>>>>>>> cd3af4eb1c551dae7978b8babed3ccaac35fbbcf
         }
 
         public void DisplayWeather()
