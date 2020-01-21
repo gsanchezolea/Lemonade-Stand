@@ -14,7 +14,8 @@ namespace Lemonade_Stand_Game
             Game Game = new Game();
             Weather weather = new Weather();
             Random random1 = new Random();
-            weather.ForecastedTemp(random1);
+            Game.WelcomeMessage();
+            Game.Instructions();
             Game.StartGame();
             Store store = new Store();
 
