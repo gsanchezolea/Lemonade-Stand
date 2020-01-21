@@ -48,10 +48,10 @@ namespace Lemonade_Stand_Game
         }
         public void randomMoney(Random random)
         {
-            if ()
-            {
+            //if ()
+            //{
 
-            }
+            //}
         }
         public void randomRecipe(Random random)
         {
@@ -63,7 +63,7 @@ namespace Lemonade_Stand_Game
 
         public int RandomLogic(Random random)
         {
-            
+
             result = random.Next(0, 8);
             return result;
         }
