@@ -82,7 +82,6 @@ namespace Lemonade_Stand_Game
         //    {
         //        int result;
         //        result = random.Next(0, 2);
-
         //        if (result == 0)
         //        {
         //            Console.WriteLine("Customer has bought a lemonade");
