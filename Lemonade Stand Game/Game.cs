@@ -15,7 +15,7 @@ namespace Lemonade_Stand_Game
         public List<Day> days;
         public Random random;
         public int playModeSelected;
-        public Inventory inventory;
+        
         public Recipe recipe;
         public Store store;
 
@@ -39,7 +39,7 @@ namespace Lemonade_Stand_Game
         {
             for (int i = 0; i < NumOfDays; i++)
             {
-                days.Add(new Day(random));
+                days.Add(new Day());
             }
             
         }
@@ -49,7 +49,7 @@ namespace Lemonade_Stand_Game
             PlayMode();
             for (int i = 0; i < days.Count; i++)
             {
-                days[i].RunDay(store,player,random,inventory,recipe);
+                days[i].RunDay(store,player,random,recipe);
             }
     
 
@@ -110,32 +110,7 @@ namespace Lemonade_Stand_Game
             playModeSelected = selection;
         }
         
-        public void ShowCurrentStats(string condition, int temperature, double Money, Day day)
-        {
-
-        }
-        public void DisplayDailyPL()
-        {
-
-        }
-        public void DisplayRunningTotalPL()
-        {
-
-        }
-        public void InstatiatePlayMode()
-        {
-            if (playModeSelected == 1)
-            {
-
-            }
-            else if (playModeSelected == 2)
-            {
-
-            }
-            else
-            {
-                Console.WriteLine("Error 414");
-            }
-        }
+        
+     
     }
 }

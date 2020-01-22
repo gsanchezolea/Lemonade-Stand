@@ -27,7 +27,7 @@ namespace Lemonade_Stand_Game
         }
 
 
-        public void VisitStore(Player player, Recipe recipe, Inventory inventory)
+        public void VisitStore(Player player, Recipe recipe)
         {
             Console.WriteLine("What would you like to buy? 1. Lemons, 2. Cups, 3.Ice Cubes, 4. Sugar Cubes, 5. To Recipe, 6. Run Day");
 
@@ -42,34 +42,34 @@ namespace Lemonade_Stand_Game
             {
                 case 1:
                     int lemonsBought = LemonQuantitySelected(player);
-                    AddLemonsToInventory(lemonsBought,inventory);
+                    AddLemonsToInventory(lemonsBought,player);
                     RemoveMoneyFromWallet(lemonsBought, pricePerLemon, player);
-                    VisitStore(player, recipe, inventory);
+                    VisitStore(player, recipe);
                     return;
 
                 case 2:
                     int cupsBought = CupQuantitySelected(player);
                     AddCupsToInventory(cupsBought, player);
                     RemoveMoneyFromWallet(cupsBought, pricePerCup, player);
-                    VisitStore(player, recipe, inventory);
+                    VisitStore(player, recipe);
                     return;
 
                 case 3:
                     int iceCubesBought = IceCubeQuantitySelected(player);
                     AddIceCubesToInventory(iceCubesBought, player);
                     RemoveMoneyFromWallet(iceCubesBought, pricePerIceCube, player);
-                    VisitStore(player, recipe, inventory);
+                    VisitStore(player, recipe);
                     return;
 
                 case 4:
                     int sugarCubesBought = SugarCubeQuantitySelected(player);
                     AddSugarCubesToInventory(sugarCubesBought, player);
                     RemoveMoneyFromWallet(sugarCubesBought, pricePerSugarCube, player);
-                    VisitStore(player, recipe, inventory);
+                    VisitStore(player, recipe);
                     return;
                 case 5:
                     recipe.ChangeRecipe();
-                    VisitStore(player, recipe, inventory);
+                    VisitStore(player, recipe);
                     return;
 
                 case 6:
@@ -89,18 +89,18 @@ namespace Lemonade_Stand_Game
             switch (number)
             {
                 case 10:
-                    Console.WriteLine(player + " has added " + number + " lemons to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + " lemons to his inventory.");
                     break;
                 case 20:
-                    Console.WriteLine(player + " has added " + number + " lemons to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + " lemons to his inventory.");
                     break;
 
                 case 50:
-                    Console.WriteLine(player + " has added " + number + " lemons to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + " lemons to his inventory.");
                     break;
 
                 default:
-                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    Console.WriteLine(player.name + "has selected an incorrect number, please try again.");
                     break;
             }
             return number;
@@ -115,18 +115,18 @@ namespace Lemonade_Stand_Game
             switch (number)
             {
                 case 10:
-                    Console.WriteLine(player + " has added " + number + "cups to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "cups to his inventory.");
                     break;
                 case 20:
-                    Console.WriteLine(player + " has added " + number + "cups to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "cups to his inventory.");
                     break;
 
                 case 50:
-                    Console.WriteLine(player + " has added " + number + "cups to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "cups to his inventory.");
                     break;
 
                 default:
-                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    Console.WriteLine(player.name + "has selected an incorrect number, please try again.");
                     break;
             }
             return number;
@@ -141,18 +141,18 @@ namespace Lemonade_Stand_Game
             switch (number)
             {
                 case 10:
-                    Console.WriteLine(player + " has added " + number + "ice cubes to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "ice cubes to his inventory.");
                     break;
                 case 20:
-                    Console.WriteLine(player + " has added " + number + "ice cubes to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "ice cubes to his inventory.");
                     break;
 
                 case 50:
-                    Console.WriteLine(player + " has added " + number + "ice cubes to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "ice cubes to his inventory.");
                     break;
 
                 default:
-                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    Console.WriteLine(player.name + "has selected an incorrect number, please try again.");
                     break;
             }
             return number;
@@ -167,50 +167,50 @@ namespace Lemonade_Stand_Game
             switch (number)
             {
                 case 10:
-                    Console.WriteLine(player + " has added " + number + "sugar cubes to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "sugar cubes to his inventory.");
                     break;
                 case 20:
-                    Console.WriteLine(player + " has added " + number + "sugar cubes to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "sugar cubes to his inventory.");
                     break;
 
                 case 50:
-                    Console.WriteLine(player + " has added " + number + "sugar cubes to his inventory.");
+                    Console.WriteLine(player.name + " has added " + number + "sugar cubes to his inventory.");
                     break;
 
                 default:
-                    Console.WriteLine(player + "has selected an incorrect number, please try again.");
+                    Console.WriteLine(player.name + "has selected an incorrect number, please try again.");
                     break;
             }
             return number;
         }
         //Add Items to their respective list.
-        public void AddLemonsToInventory(int lemonsBought, Inventory inventory)
+        public void AddLemonsToInventory(int lemonsBought, Player player)
         {
             for (int i = 0; i < lemonsBought; i++)
             {
-                inventory.lemons.Add(new Lemon());
+                player.inventory.lemons.Add(new Lemon());
             }
-            //Create a method that removes money from wallet.
+       
         }
-        public void AddCupsToInventory(int cupsBought, Inventory inventory)
+        public void AddCupsToInventory(int cupsBought, Player player)
         {
             for (int i = 0; i < cupsBought; i++)
             {
-                inventory.cups.Add(new Cup());
+                player.inventory.cups.Add(new Cup());
             }
         }
-        public void AddIceCubesToInventory(int iceCubesBought, Inventory inventory)
+        public void AddIceCubesToInventory(int iceCubesBought, Player player)
         {
             for (int i = 0; i < iceCubesBought; i++)
             {
-                inventory.iceCubes.Add(new IceCube());
+               player.inventory.iceCubes.Add(new IceCube());
             }
         }
-        public void AddSugarCubesToInventory(int sugarCubesBought, Inventory inventory)
+        public void AddSugarCubesToInventory(int sugarCubesBought, Player player)
         {
             for (int i = 0; i < sugarCubesBought; i++)
             {
-                inventory.sugarCubes.Add(new SugarCube());
+                player.inventory.sugarCubes.Add(new SugarCube());
             }
         }
 

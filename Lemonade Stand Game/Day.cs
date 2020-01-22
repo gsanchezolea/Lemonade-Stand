@@ -24,15 +24,12 @@ namespace Lemonade_Stand_Game
 
         }
 
-        public void RunDay(Store store, Player player, Random random, Inventory inventory, Recipe recipe)
+        public void RunDay(Store store, Player player, Random random, Recipe recipe)
         {
             weather.WeatherForTheDay(random);
-<<<<<<< HEAD
-=======
             weather.TemperatureForTheDay(random);
->>>>>>> cd3af4eb1c551dae7978b8babed3ccaac35fbbcf
             weather.ForecastedWeather();
-            store.VisitStore(player, recipe, inventory);
+            store.VisitStore(player, recipe);
             InstatiateCustomers(random);
 
             weather.DisplayWeather();
@@ -169,8 +166,5 @@ namespace Lemonade_Stand_Game
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cd3af4eb1c551dae7978b8babed3ccaac35fbbcf
+

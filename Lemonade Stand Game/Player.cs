@@ -14,7 +14,7 @@ namespace Lemonade_Stand_Game
 
         
         public Wallet wallet;
-        
+        public Inventory inventory;
         public Pitcher pitcher;
 
 
@@ -22,28 +22,14 @@ namespace Lemonade_Stand_Game
         public Player()
         {
             name = "JOE";
-            
-            //wallet = 
 
+            //wallet = 
+            wallet = new Wallet();
+            inventory = new Inventory();
+            pitcher = new Pitcher();
         }
         //Member Methods (CAN DO)
-        public void InventoryAccess(Inventory inventory)
-        {
-            
-        }
-        public void WalletAccess(Wallet wallet)
-        {
-
-        }
-        public void RecipeAccess(Recipe recipe)
-        {
-
-        }
-        public void PitcherAccess(Pitcher pitcher)
-        {
-
-        }
-
+       
         
     }
 }
